@@ -6,8 +6,10 @@ package com.task.algorithm;
  */
 public class BestTimeToBuyAndSellStock {
 
-    static int maxProfit(int prices[], int n) {
-        int buy = prices[0], max_profit = 0;
+    static int maxProfit(int[] prices, int n) {
+        int buy = prices[0];
+        int max_profit = 0;
+
         for (int i = 1; i < n; i++) {
 
             // Checking for lower buy value
@@ -22,7 +24,7 @@ public class BestTimeToBuyAndSellStock {
     }
 
     // Driver Code
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int[] prices = {7, 1, 5, 6, 4};
         int n = prices.length;
         int max_profit = maxProfit(prices, n);
