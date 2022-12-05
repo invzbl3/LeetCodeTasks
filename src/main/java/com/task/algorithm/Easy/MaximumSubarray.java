@@ -8,8 +8,36 @@ package com.task.algorithm.Easy;
 /*
     Algorithm description:
     ---------------------
+    Subarrays are arrays inside another array which only contains contiguous elements.
+
+    Given an array of integers, the task is to find the maximum subarray sum possible
+    of all the non-empty subarrays.
+
+    Example:
+
+    Input: [-3, -4, 5, -1, 2, -4, 6, -1]
+    Output: 8
+    Explanation: Subarray [5, -1, 2, -4, 6] is the max sum contiguous subarray with sum 8.
+
+    Input: [-2, 3, -1, 2]
+    Output: 4
+    Explanation: Subarray [3, -1, 2] is the max sum contiguous subarray with sum 4.
+
+    We would be solving the problem by following approaches –
+
+    - Simple approach
+    - Efficient Approach: Kadane’s Algorithm
 
 
+    Simple Approach:
+
+    The simple approach to solve this problem is to run two for loops and for every subarray check if
+    it is the maximum sum possible. Follow the below steps to solve the problem.
+
+    Run a loop for i from 0 to n – 1, where n is the size of the array.
+    Now, we will run a nested loop for j from i to n – 1 and add the value of the element at index j
+    to a variable currentMax. Lastly, for every subarray, we will check if the currentMax is the
+    maximum sum of all contiguous subarrays.
  */
 
 // Easy
@@ -49,6 +77,8 @@ package com.task.algorithm.Easy;
 // which is more subtle.
 
 // Solution 1
+// https://www.baeldung.com/java-maximum-subarray
+// https://www.interviewbit.com/blog/maximum-subarray-sum/
 class MaximumSubarray {
 
     public static void main(String[] args) {

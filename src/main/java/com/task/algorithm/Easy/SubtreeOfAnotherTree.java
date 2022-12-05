@@ -8,10 +8,14 @@ package com.task.algorithm.Easy;
 /*
     Algorithm description:
     ---------------------
+    Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the
+    same structure and node values of subRoot and false otherwise.
 
-
+    A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node's
+    descendants. The tree tree could also be considered as a subtree of itself.
  */
 
+// https://leetcode.com/problems/subtree-of-another-tree/
 public class SubtreeOfAnotherTree {
 
     public boolean equals(Node n1, Node n2) {

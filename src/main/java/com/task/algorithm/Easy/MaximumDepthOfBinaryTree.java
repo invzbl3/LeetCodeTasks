@@ -8,12 +8,19 @@ package com.task.algorithm.Easy;
 /*
     Algorithm description:
     ---------------------
+    The maximum depth of a binary tree is the number of nodes from the root down to the furthest leaf node.
+    In other words, it is the height of a binary tree.
 
+    The algorithm uses recursion to calculate the maximum height:
 
+    1. Recursively calculate the height of the tree to the left of the root.
+    2. Recursively calculate the height of the tree to the right of the root.
+    3. Pick the larger height from the two answers and add one to it (to account for the root node).
  */
 
 // Java program to find height of tree
 
+// https://www.educative.io/answers/finding-the-maximum-depth-of-a-binary-tree
 // A binary tree node
 class Node3 {
     int data;
@@ -25,7 +32,7 @@ class Node3 {
     }
 }
 
-class BinaryTree {
+class MaximumDepthOfBinaryTree {
     Node3 root;
 
     /* Compute the "maxDepth" of a tree -- the number of
@@ -49,7 +56,7 @@ class BinaryTree {
 
     /* Driver program to test above functions */
     public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
+        MaximumDepthOfBinaryTree tree = new MaximumDepthOfBinaryTree();
 
         tree.root = new Node3(1);
         tree.root.left = new Node3(2);

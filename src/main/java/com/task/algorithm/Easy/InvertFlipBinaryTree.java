@@ -8,11 +8,21 @@ package com.task.algorithm.Easy;
 /*
     Algorithm description:
     ---------------------
+    An inversion, or mirror, of a Binary Tree (T), is just a Binary Tree M(T) whose
+    left and right children (of all non-leaf nodes) are swapped.
 
+    Algorithm
+    The solution is a simple recursive approach:
 
+    Call invert for left-subtree.
+    Call invert for right-subtree.
+    Swap left and right subtrees.
  */
 
 // https://www.techiedelight.com/invert-binary-tree-recursive-iterative/
+// https://leetcode.com/problems/invert-binary-tree/
+// https://www.educative.io/answers/how-to-invert-a-binary-tree
+// https://www.baeldung.com/java-reversing-a-binary-tree
 class Node {
     int data;
     Node left, right;

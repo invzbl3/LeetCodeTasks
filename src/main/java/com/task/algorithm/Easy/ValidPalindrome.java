@@ -8,10 +8,24 @@ package com.task.algorithm.Easy;
 /*
     Algorithm description:
     ---------------------
+    A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and
+    removing all non-alphanumeric characters, it reads the same forward and backward.
+    Alphanumeric characters include letters and numbers.
 
+    Given a string s, return true if it is a palindrome, or false otherwise.
 
+    Valid Palindrome
+    Given a string, determine if it is a palindrome, considering only alphanumeric characters and
+    ignoring cases.
+
+    For example, "A man, a plan, a canal: Panama" is a palindrome. "race a car" is not a palindrome.
+
+    Note: Have you consider that the string might be empty? This is a good question to ask during an
+    interview.
  */
 
+// https://leetcode.com/problems/valid-palindrome/
+// https://mosqidiot.gitbooks.io/leetcode-answer-java/content/valid_palindrome.html
 public class ValidPalindrome {
 
     public static void main(String[] args) {

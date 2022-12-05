@@ -1,5 +1,8 @@
 package com.task.algorithm.Easy;
 
+// Java program for reversing linked list using additional space
+import java.util.*;
+
 /**
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
@@ -11,6 +14,32 @@ package com.task.algorithm.Easy;
 
 
  */
+
+public class ReverseALinkedList {
+    public static void main(String[] args) {
+        // Declaring linkedlist without any initial size
+        LinkedList<String> linkedli = new LinkedList<>();
+        // Appending elements at the end of the list
+        linkedli.add("Cherry");
+        linkedli.add("Chennai");
+        linkedli.add("Bullet");
+        System.out.print("Elements before reversing: " + linkedli);
+        linkedli = reverseLinkedList(linkedli);
+        System.out.print("\nElements after reversing: " + linkedli);
+    }
+
+    // Takes a linkedlist as a parameter and returns a reversed linkedlist
+    public static LinkedList<String> reverseLinkedList(LinkedList<String> list) {
+        LinkedList<String> revLinkedList = new LinkedList<>();
+        for (int i = list.size() - 1; i >= 0; i--) {
+
+            // Append the elements in reverse order
+            revLinkedList.add(list.get(i));
+        }
+        // Return the reversed arraylist
+        return revLinkedList;
+    }
+}
 
 /*
 class MyLinkedList {

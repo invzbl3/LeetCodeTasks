@@ -10,11 +10,15 @@ import java.util.*;
 /*
     Algorithm description:
     ---------------------
-
-
+    It is a very interesting problem frequently asked in interviews of top IT companies like Google, Amazon,
+    TCS, Accenture, Adobe, Apple, Infosys, etc. By solving the problem, one wants to check the logical
+    ability, critical thinking, and problem-solving skill of the interviewee. So, in this section,
+    we are going to find minimum number of meeting rooms required problem in Java with different approaches
+    and logic. Also, we will create Java programs for the same.
  */
 
-class MeetingRoom {
+// https://www.javatpoint.com/minimum-number-of-meeting-room-required-problem-in-java
+class MeetingRooms {
     //user-defined function to find the minimum number of meeting rooms required
     public static int solve(int[][] intervals) {
         int n = intervals.length;
