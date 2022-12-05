@@ -90,19 +90,19 @@ public class ReorderList {
         int t = sc.nextInt();
         while (t > 0) {
             int n = sc.nextInt();
-            ReorderList llist = new ReorderList();
+            ReorderList list = new ReorderList();
 
             int a1 = sc.nextInt();
             Node head = new Node(a1);
-            llist.addToTheLast(head);
+            list.addToTheLast(head);
             for (int i = 1; i < n; i++) {
                 int a = sc.nextInt();
-                llist.addToTheLast(new Node(a));
+                list.addToTheLast(new Node(a));
             }
 
-            llist.head = new gfg().reorderlist(llist.head);
+            list.head = new gfg().reorderlist(list.head);
 
-            llist.printList();
+            list.printList();
 
             t--;
         }
