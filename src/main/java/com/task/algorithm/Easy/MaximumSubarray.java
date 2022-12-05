@@ -1,5 +1,17 @@
 package com.task.algorithm.Easy;
 
+/**
+ * @author invzbl3 on 12/3/2022
+ * @project LeetCodeTask
+ */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 // Easy
 // Given an integer array nums,
 // find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
@@ -37,16 +49,10 @@ package com.task.algorithm.Easy;
 // which is more subtle.
 
 // Solution 1
-
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-// Solution 1
 class MaximumSubarray {
 
     public static void main(String[] args) {
-        int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
+        int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(maxSubArray(arr));
     }
 

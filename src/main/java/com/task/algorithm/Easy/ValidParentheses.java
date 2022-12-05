@@ -7,6 +7,14 @@ import java.util.List;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class ValidParentheses {
 
     public static boolean checkParenthesis(String str) {

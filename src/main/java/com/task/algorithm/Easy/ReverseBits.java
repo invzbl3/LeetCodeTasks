@@ -4,6 +4,14 @@ package com.task.algorithm.Easy;
  * @author invzbl3 on 12/3/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class ReverseBits {
     public static int reverseBinaryBits(int input){
         int rev_input = 0;

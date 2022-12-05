@@ -1,10 +1,19 @@
 package com.task.algorithm.Easy;
 
 import java.util.*;
+
 /**
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 class MeetingRoom {
     //user-defined function to find the minimum number of meeting rooms required
     public static int solve(int[][] intervals) {
@@ -40,7 +49,7 @@ class MeetingRoom {
             //find the max of answer and curr
             answer = Integer.max(answer, curr);
         }
-        //returns the mnimum number of meeting room required
+        //returns the minimum number of meeting room required
         return answer;
     }
 

@@ -7,6 +7,14 @@ import java.util.HashMap;
  * @author invzbl3 on 12/3/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class TwoSum {
 
     public static void main(String[] args) {

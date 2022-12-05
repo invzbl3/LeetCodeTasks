@@ -4,6 +4,14 @@ package com.task.algorithm.Easy;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class SubtreeOfAnotherTree {
 
     public boolean equals(Node n1, Node n2) {

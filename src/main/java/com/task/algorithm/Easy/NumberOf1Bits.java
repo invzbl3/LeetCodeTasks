@@ -4,6 +4,14 @@ package com.task.algorithm.Easy;
  * @author invzbl3 on 12/3/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class NumberOf1Bits {
 
     public static int hammingWeight(int n) {

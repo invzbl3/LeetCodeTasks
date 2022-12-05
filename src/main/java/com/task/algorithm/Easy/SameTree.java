@@ -4,6 +4,14 @@ package com.task.algorithm.Easy;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class SameTree {
     public static void main(String[] args) {
         SameTree same = new SameTree();
@@ -33,7 +41,6 @@ public class SameTree {
         if (!isSameTree(first.left, second.left)) {
             return false;
         }
-
         return isSameTree(first.right, second.right);
     }
 

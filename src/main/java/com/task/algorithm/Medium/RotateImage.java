@@ -85,7 +85,6 @@ public class RotateImage {
 
         // Catch block to handle the exception
         catch (IOException e) {
-
             // Print the line number where exception
             // occurred
             e.printStackTrace();

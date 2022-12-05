@@ -5,6 +5,13 @@ package com.task.algorithm.Easy;
  * @project LeetCodeTask
  */
 
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 // Java code to implement the approach
 class MissingNumber {
 

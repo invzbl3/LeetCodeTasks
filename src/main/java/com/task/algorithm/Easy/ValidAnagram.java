@@ -7,6 +7,14 @@ import java.util.Scanner;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 public class ValidAnagram {
 
     public static boolean solution(String s1, String s2) {

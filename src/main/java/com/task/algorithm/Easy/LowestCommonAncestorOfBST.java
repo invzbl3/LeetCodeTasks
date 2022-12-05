@@ -2,10 +2,19 @@ package com.task.algorithm.Easy;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
 // Java Program for Lowest Common Ancestor
 // in a Binary Tree
 // A O(n) solution to find LCA of
@@ -14,7 +23,8 @@ import java.util.List;
 // A Binary Tree node
 class Node2 {
     int data;
-    Node left, right;
+    Node left;
+    Node right;
 
     Node2(int value) {
         data = value;
@@ -25,8 +35,8 @@ class Node2 {
 public class LowestCommonAncestorOfBST {
 
     Node root;
-    private List<Integer> path1 = new ArrayList<>();
-    private List<Integer> path2 = new ArrayList<>();
+    private final List<Integer> path1 = new ArrayList<>();
+    private final List<Integer> path2 = new ArrayList<>();
 
     // Finds the path from root node to given root of the
     // tree.
@@ -40,10 +50,10 @@ public class LowestCommonAncestorOfBST {
 
         if (!findPath(root, n1, path1)
                 || !findPath(root, n2, path2)) {
-            System.out.println((path1.size() > 0)
+            System.out.println((!path1.isEmpty())
                     ? "n1 is present"
                     : "n1 is missing");
-            System.out.println((path2.size() > 0)
+            System.out.println((!path2.isEmpty())
                     ? "n2 is present"
                     : "n2 is missing");
             return -1;

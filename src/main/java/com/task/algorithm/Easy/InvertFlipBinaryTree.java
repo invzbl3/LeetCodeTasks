@@ -4,6 +4,15 @@ package com.task.algorithm.Easy;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
+
+/*
+    Algorithm description:
+    ---------------------
+
+
+ */
+
+// https://www.techiedelight.com/invert-binary-tree-recursive-iterative/
 class Node {
     int data;
     Node left, right;

@@ -4,9 +4,15 @@ package com.task.algorithm.Easy;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
-/*Given two sorted linked lists consisting of N and M nodes
-respectively. The task is to merge both of the list
-(in-place) and return head of the merged list.*/
+
+/*
+    Algorithm description:
+    ---------------------
+    Given two sorted linked lists consisting of N and M nodes
+    respectively. The task is to merge both of the list
+    (in-place) and return head of the merged list.
+ */
+
 class MergeTwoSortedLists {
 
     /* Link list Node */
@@ -121,7 +127,7 @@ class MergeTwoSortedLists {
     /* Driver program to test above functions*/
     public static void main(String[] args) {
         /* Start with the empty list */
-        Node res = null;
+        Node res;
 
         /* Let us create two sorted linked lists to test
            the above functions. Created lists shall be
