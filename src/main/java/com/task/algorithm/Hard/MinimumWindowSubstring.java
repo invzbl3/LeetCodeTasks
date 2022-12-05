@@ -6,5 +6,5 @@ package com.task.algorithm.Hard;
  */
 public class MinimumWindowSubstring {
 
-    
+
 }
