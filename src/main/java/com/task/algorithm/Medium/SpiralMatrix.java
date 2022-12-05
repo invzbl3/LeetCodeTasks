@@ -1,5 +1,7 @@
 package com.task.algorithm.Medium;
 
+import java.util.*;
+
 // Medium
 
 // Given an m x n matrix, return all elements of the matrix in spiral order.
@@ -23,7 +25,53 @@ package com.task.algorithm.Medium;
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
  */
-public class SpiralMatrix {
+// Java program for the above approach
+class SpiralMatrix {
 
+    // Function to print in spiral order
+    public static List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> ans = new ArrayList<>();
 
+        if (matrix.length == 0)
+            return ans;
+
+        int m = matrix.length;
+        int n = matrix[0].length;
+        boolean[][] seen = new boolean[m][n];
+        int[] dr = {0, 1, 0, -1};
+        int[] dc = {1, 0, -1, 0};
+        int x = 0;
+        int y = 0;
+        int di = 0;
+
+        // Iterate from 0 to R * C - 1
+        for (int i = 0; i < m * n; i++) {
+            ans.add(matrix[x][y]);
+            seen[x][y] = true;
+            int cr = x + dr[di];
+            int cc = y + dc[di];
+
+            if (0 <= cr && cr < m && 0 <= cc && cc < n
+                    && !seen[cr][cc]) {
+                x = cr;
+                y = cc;
+            } else {
+                di = (di + 1) % 4;
+                x += dr[di];
+                y += dc[di];
+            }
+        }
+        return ans;
+    }
+
+    // Driver Code
+    public static void main(String[] args) {
+        int[][] a = {{1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 16}};
+
+        // Function call
+        System.out.println(spiralOrder(a));
+    }
 }

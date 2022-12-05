@@ -35,7 +35,8 @@ public class DetectCycleInALinkedList {
     }
 
     static boolean hasCycle(Node head) {
-        Node slow = head, fast = head;
+        Node slow = head;
+        Node fast = head;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;

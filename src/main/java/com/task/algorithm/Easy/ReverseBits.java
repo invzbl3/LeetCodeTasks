@@ -7,6 +7,7 @@ package com.task.algorithm.Easy;
 public class ReverseBits {
     public static int reverseBinaryBits(int input){
         int rev_input = 0;
+
         while (input > 0){
             rev_input <<= 1;
             if ((input & 1) == 1){

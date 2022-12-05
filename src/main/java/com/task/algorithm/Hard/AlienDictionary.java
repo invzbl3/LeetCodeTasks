@@ -60,6 +60,7 @@ public class AlienDictionary {
                 wordDependencies.put(wordA.charAt(index), strDep);
             }
         }
+
         StringBuilder builder = new StringBuilder();
         Set<Character> visited = new HashSet<>();
         //iterate through the unique chars while like running toposort to process dependencies
