@@ -1,4 +1,4 @@
-package com.task.algorithm.Easy;
+package com.task.algorithm.Easy.solved;
 
 /**
  * @author invzbl3 on 12/4/2022
@@ -22,6 +22,53 @@ package com.task.algorithm.Easy;
 
 // https://www.educative.io/answers/finding-the-maximum-depth-of-a-binary-tree
 // A binary tree node
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+
+class TreeNode {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+public class MaximumDepthOfBinaryTree {
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return Math.max(left, right) + 1;
+    }
+}
+
+/*
 class Node3 {
     int data;
     Node3 left, right;
@@ -35,18 +82,24 @@ class Node3 {
 class MaximumDepthOfBinaryTree {
     Node3 root;
 
-    /* Compute the "maxDepth" of a tree -- the number of
+    */
+/* Compute the "maxDepth" of a tree -- the number of
        nodes along the longest path from the root node
-       down to the farthest leaf node.*/
+       down to the farthest leaf node.*//*
+
     int maxDepth(Node3 node) {
         if (node == null)
             return 0;
         else {
-            /* compute the depth of each subtree */
+            */
+/* compute the depth of each subtree *//*
+
             int lDepth = maxDepth(node.left);
             int rDepth = maxDepth(node.right);
 
-            /* use the larger one */
+            */
+/* use the larger one *//*
+
             if (lDepth > rDepth)
                 return (lDepth + 1);
             else
@@ -54,7 +107,9 @@ class MaximumDepthOfBinaryTree {
         }
     }
 
-    /* Driver program to test above functions */
+    */
+/* Driver program to test above functions *//*
+
     public static void main(String[] args) {
         MaximumDepthOfBinaryTree tree = new MaximumDepthOfBinaryTree();
 
@@ -67,4 +122,4 @@ class MaximumDepthOfBinaryTree {
         System.out.println("Height of tree is "
                 + tree.maxDepth(tree.root));
     }
-}
+}*/

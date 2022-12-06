@@ -54,6 +54,5 @@ class Main2 {
         ds.search("blue");
         ds.search("java");
         ds.search("co..");
-
     }
 }

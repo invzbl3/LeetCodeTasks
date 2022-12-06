@@ -1,6 +1,4 @@
-package com.task.algorithm.Easy;
-
-import java.util.Scanner;
+package com.task.algorithm.Easy.solved;
 
 /**
  * @author invzbl3 on 12/3/2022
@@ -29,10 +27,37 @@ import java.util.Scanner;
 public class ClimbingStairs {
 
     public static void main(String[] args) {
+        System.out.println(climbStairs(10));
+    }
+
+    public static int climbStairs(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+        int current = 0;
+        int prev1 = 2;
+        int prev2 = 1;
+        for (int i = 3; i <= n; i++) {
+            current = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = current;
+        }
+        return current;
+    }
+}
+
+/*    public static void main(String[] args) {
+        System.out.println(climbStairs());
+    }
+
+    public static int climbStairs() {
         Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
         System.out.print("How many steps there are: ");
         try {
-            int n = scan.nextInt();
             scan.close();
             if (n <= 2) {
                 System.out.printf("There are %d distinct ways to climb %d steps", n, n);
@@ -49,8 +74,8 @@ public class ClimbingStairs {
         } catch (Exception e) {
             System.out.println("You need to enter a integer number!");
         }
-    }
-}
+        return n;
+    }*/
 
 /*
 public class ClimbingStairs {

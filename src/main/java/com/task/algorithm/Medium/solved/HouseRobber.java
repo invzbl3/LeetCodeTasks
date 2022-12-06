@@ -1,4 +1,4 @@
-package com.task.algorithm.Easy;
+package com.task.algorithm.Medium.solved;
 
 /**
  * @author invzbl3 on 12/3/2022
@@ -9,6 +9,7 @@ package com.task.algorithm.Easy;
     Algorithm description:
     ---------------------
     House Robber
+
     You are a professional robber planning to rob houses along a street. Each house has a certain amount
     of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses
     have security system connected and it will automatically contact the police if two adjacent houses were
@@ -23,30 +24,55 @@ package com.task.algorithm.Easy;
  */
 
 public class HouseRobber {
+    public static int rob(int[] nums) {
+
+        int n = nums.length;
+
+        if (n == 0) return 0;
+        if (n == 1) return nums[0];
+
+        int[] a = new int[n];
+
+        a[0] = nums[0];
+        a[1] = Math.max(nums[0], nums[1]);
+
+        for (int i = 2; i < n; i++)
+            a[i] = Math.max(nums[i] + a[i - 2], a[i - 1]);
+
+        return a[n - 1];
+    }
 
     public static void main(String[] args) {
-        int[] nums = {3, 8, 4};
-        System.out.println(houseRobber(nums));
-    }
-
-    public static long houseRobber(int[] nums) {
-        if (nums == null || nums.length == 0)
-            return 0;
-
-        if (nums.length == 1)
-            return nums[0];
-
-        long[] dp = new long[nums.length];
-        dp[0] = nums[0];
-        dp[1] = Math.max(nums[0], nums[1]);
-
-        for (int i = 2; i < nums.length; i++) {
-            dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
-        }
-
-        return dp[nums.length - 1];
+        int[] arr = {1, 2, 3, 1};
+        System.out.println(rob(arr));
     }
 }
+
+/*public class HouseRobber {
+    public static int rob(int[] nums) {
+
+        int n = nums.length;
+
+        if (n == 0) return 0;
+        if (n == 1) return nums[0];
+
+        int[] a = new int[n];
+
+        a[0] = nums[0];
+        a[1] = Math.max(nums[0], nums[1]);
+
+        for (int i = 2; i < n; i++)
+            a[i] = Math.max(nums[i] + a[i - 2], a[i - 1]);
+
+        return a[n - 1];
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 1};
+        System.out.println(rob(arr));
+    }
+}*/
 
 //____________________________________________________________
 //Without extra memory

@@ -1,5 +1,8 @@
 package com.task.algorithm.Easy;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author invzbl3 on 12/4/2022
  * @project LeetCodeTask
@@ -24,34 +27,94 @@ package com.task.algorithm.Easy;
 
 // https://walkingtechie.blogspot.com/2017/01/detect-cycle-in-directed-graph.html
 
-public class DetectCycleInALinkedList {
-    static class Node {
-        int val;
-        Node next;
-        Node (int val) {
-            this.val = val;
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+
+class Solution {
+
+    /**
+     * A linked list is said to contain a cycle if any node is visited more than
+     * once while traversing the list.
+     * <p>
+     * Create a function with one parameter: a pointer to a Node object named
+     * head that points to the head of a linked list. Your function must return
+     * a boolean denoting whether or not there is a cycle in the list. If there
+     * is a cycle, return true; otherwise, return false.
+     * <p>
+     * Note: If the list is empty, head will be null.
+     */
+
+    public class Node {
+
+        private int data;
+        private Node next;
+
+        public Node(int data) {
+            this.data = data;
+        }
+
+        public Node(int data, Node next) {
+            this(data);
+            this.next = next;
+        }
+
+        public int getData() {
+            return data;
+        }
+
+        public void setData(int data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
         }
     }
 
-    public static void main(String[] args) {
-        Node head = new Node(3);
-        head.next = new Node(2);
-        head.next.next = new Node(0);
-        head.next.next.next = new Node (-4);
-        System.out.println(hasCycle(head)); // false
-    }
+    public boolean hasCycle(Node head) {
+        Set<Node> nodes = new HashSet<>();
+        Node curr = head;
 
-    static boolean hasCycle(Node head) {
-        Node slow = head;
-        Node fast = head;
+        while (curr != null) {
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-
-            if (slow == fast)
+            if (!nodes.contains(curr)) {
+                nodes.add(curr);
+            } else {
                 return true;
+            }
+
+            curr = curr.getNext();
         }
+
         return false;
+    }
+
+    public boolean hasCycleOtherSolution(Node head) {
+        if (head == null) {
+            return false;
+        } else {
+            Node slow = head;
+            Node fast = head.getNext();
+
+            while ((fast != null) && (fast.getNext() != null) && (fast != slow)) {
+                slow = slow.getNext();
+                fast = fast.getNext().getNext();
+            }
+
+            return (fast != null) && (fast == slow);
+        }
     }
 }
