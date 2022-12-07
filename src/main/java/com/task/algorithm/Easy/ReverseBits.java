@@ -23,23 +23,43 @@ package com.task.algorithm.Easy;
  */
 
 // https://leetcode.com/problems/reverse-bits/
+
+public class Solution {
+    public static int  reverseBits(int n) {
+        int rval = 0x0;
+        for (int i = 0; i < 32; i ++) {
+            if ( ((1 << i) & n) != 0) {
+                rval |= 1 << (31 - i);
+            }
+        }
+        return rval;
+    }
+
+    public static void main(String[] args) {
+        int n = 43261596;
+
+        System.out.println(reverseBits(n));  // 964176192
+    }
+}
+
+/*
 public class ReverseBits {
-    public static int reverseBinaryBits(int input){
+    public static int reverseBits(int n) {
         int rev_input = 0;
 
-        while (input > 0){
+        while (n > 0) {
             rev_input <<= 1;
-            if ((input & 1) == 1){
+            if ((n & 1) == 1) {
                 rev_input ^= 1;
             }
-            input >>= 1;
+            n >>= 1;
         }
         return rev_input;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int input = 13;
         System.out.println("Reverse actual bits of the given number");
-        System.out.println(reverseBinaryBits(input));
+        System.out.println(reverseBits(input));
     }
-}
+}*/

@@ -1,4 +1,4 @@
-package com.task.algorithm.Easy;
+package com.task.algorithm.Easy.solved;
 
 /**
  * @author invzbl3 on 12/3/2022

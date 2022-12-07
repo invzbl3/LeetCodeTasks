@@ -24,8 +24,11 @@ package com.task.algorithm.Easy;
     Explanation: The missing number between 1 to 5 is 4
  */
 
+
+
 // Java code to implement the approach
 // https://www.geeksforgeeks.org/find-the-missing-number/
+/*
 class MissingNumber {
 
     // Function to find the missing number
@@ -56,4 +59,4 @@ class MissingNumber {
         // Function call
         findMissing(arr, n);
     }
-}
+}*/

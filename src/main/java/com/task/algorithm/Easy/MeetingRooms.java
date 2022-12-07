@@ -34,7 +34,9 @@ class MeetingRooms {
         Arrays.sort(start);
         //sorting end time array
         Arrays.sort(end);
-        int i = 1, j = 0, curr = 1;
+        int i = 1;
+        int j = 0;
+        int curr = 1;
         int answer = 1;
         //executes when any both conditions return true
         while (i < start.length && j < end.length) {
