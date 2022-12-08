@@ -1,4 +1,4 @@
-package com.task.algorithm.Easy;
+package com.task.algorithm.Medium.solved;
 
 /**
  * @author invzbl3 on 12/3/2022
@@ -19,17 +19,15 @@ package com.task.algorithm.Easy;
 
 // https://www.javatpoint.com/sum-of-numbers-in-java#:~:text=Sum%20of%20Two%20Numbers%20in,variable%20and%20store%20the%20result.
 public class SumOfTwoIntegers {
+    public int getSum(int a, int b) {
+        int rem = (a & b) << 1;
+        if (rem == 0)
+            return a ^ b;
+        return getSum(a ^ b, rem);
+    }
 
     public static void main(String[] args) {
-
-        System.out.println("Enter two numbers");
-        int first = 10;
-        int second = 20;
-
-        System.out.println(first + " " + second);
-
-        // add two numbers
-        int sum = first + second;
-        System.out.println("The sum is: " + sum);
+        SumOfTwoIntegers sumOfTwoIntegers = new SumOfTwoIntegers();
+        System.out.println(sumOfTwoIntegers.getSum(17, -12));
     }
 }

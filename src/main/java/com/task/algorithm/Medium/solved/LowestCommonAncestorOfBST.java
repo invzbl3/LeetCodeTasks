@@ -23,6 +23,7 @@ package com.task.algorithm.Medium.solved;
  *     TreeNode(int x) { val = x; }
  * }
  */
+/*
 public class LowestCommonAncestorOfBST {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         int min = Math.min(p.val, q.val);
@@ -42,4 +43,4 @@ public class LowestCommonAncestorOfBST {
         }
         return null;
     }
-}
+}*/

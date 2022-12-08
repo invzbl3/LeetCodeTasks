@@ -1,4 +1,4 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Easy.solved;
 
 import java.util.Arrays;
 

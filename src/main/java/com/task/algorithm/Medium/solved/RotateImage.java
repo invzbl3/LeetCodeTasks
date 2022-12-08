@@ -1,4 +1,4 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Medium.solved;
 
 // Java program to rotate image by 90 degrees clockwise
 

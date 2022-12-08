@@ -1,89 +1,78 @@
 package com.task.algorithm.Medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List<Node> neighbors;
+    public Node() {
+        val = 0;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val) {
+        val = _val;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val, ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+}
+*/
 
 /**
  * @author invzbl3 on 12/3/2022
  * @project LeetCodeTask
  */
-public class CloneGraph {
-    public int val;
-    public List<CloneGraph> neighbors;
 
-    public CloneGraph() {
+class Node2 {
+    public int val;
+    public List<Node> neighbors;
+    public Node2() {
         val = 0;
         neighbors = new ArrayList<>();
     }
-
-    public CloneGraph(int _val) {
+    public Node2(int _val) {
         val = _val;
         neighbors = new ArrayList<>();
     }
-
-    public CloneGraph(int _val, List<CloneGraph> _neighbors) {
+    public Node2(int _val, ArrayList<Node> _neighbors) {
         val = _val;
         neighbors = _neighbors;
     }
+}
 
-    public static CloneGraph cloneGraph_via_BFS(CloneGraph root) {
-        Map<CloneGraph,CloneGraph> mapOriginalToCopy = new HashMap<>();
-        if(root== null) return null;
+class CloneGraph {
+    HashSet<Integer> visit = new HashSet<>();
+    HashMap<Integer, Node2> copy = new HashMap<>();
 
-        List<Integer> visited = new ArrayList<>();
-        Queue<CloneGraph> queue = new LinkedList<>();
-
-        queue.add(root);
-
-        visited.add(root.val);
-        CloneGraph clonedRoot = new CloneGraph(root.val);
-        mapOriginalToCopy.put(root,clonedRoot);
-
-        while(!queue.isEmpty())
-        {
-            CloneGraph node = queue.poll();
-
-            for (CloneGraph neighbour:node.neighbors   ) {
-                CloneGraph clonedNode = mapOriginalToCopy.get(node);
-                if(neighbour != null)
-                {
-                    CloneGraph clonedNeighbour;
-                    if (! visited.contains(neighbour.val))   {
-                        visited.add(neighbour.val);
-                        queue.add(neighbour);
-                        clonedNeighbour = new CloneGraph(neighbour.val);
-                        mapOriginalToCopy.put(neighbour,clonedNeighbour);
-                    }
-                    else   clonedNeighbour =mapOriginalToCopy.get(neighbour);
-
-                    clonedNode.neighbors.add(clonedNeighbour);
-                    // mapOriginalToCopy.put(neighbour,clonedNeighbour);
-                }
-            }
-        }
-        return clonedRoot;
+    public Node2 cloneGraph(Node2 node2) {
+        if (node2 == null) return null;
+        Node2 start = new Node2(node2.val);
+        copy.put(start.val, start);
+        cloneGraph(node2, start);
+        return start;
     }
 
-    public static void main(String[] args)    {
-        // Adjaceny list input = [[2,4],[1,3],[2,4],[1,3]]
+    public void cloneGraph(Node initial, Node clone) {
+        if (visit.contains(initial.val)) return;
+        visit.add(initial.val);
 
-        CloneGraph node1 = new CloneGraph(1);
-        CloneGraph node2 = new CloneGraph(2);
-        CloneGraph node3 = new CloneGraph(3);
-        CloneGraph node4 = new CloneGraph(4);
-
-        node1.neighbors.add(node2);
-        node1.neighbors.add(node4);
-
-        node2.neighbors.add(node1);
-        node2.neighbors.add(node3);
-
-        node3.neighbors.add(node2);
-        node3.neighbors.add(node4);
-
-        node4.neighbors.add(node1);
-        node4.neighbors.add(node3);
-
-        CloneGraph clonedgraph =  CloneGraph.cloneGraph_via_BFS(node1);
-        System.out.println(clonedgraph);
+        for (Node next : initial.neighbors) {
+            Node same;
+            if (!copy.containsKey(next.val)) {
+                same = new Node(next.val);
+                copy.put(same.val, same);
+            } else {
+                same = copy.get(next.val);
+            }
+            clone.neighbors.add(same);
+            cloneGraph(next, same);
+        }
     }
 }
