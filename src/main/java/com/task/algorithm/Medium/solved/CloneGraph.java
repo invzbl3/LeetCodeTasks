@@ -1,4 +1,4 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Medium.solved;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,14 +10,17 @@ import java.util.List;
 class Node {
     public int val;
     public List<Node> neighbors;
+
     public Node() {
         val = 0;
         neighbors = new ArrayList<Node>();
     }
+
     public Node(int _val) {
         val = _val;
         neighbors = new ArrayList<Node>();
     }
+
     public Node(int _val, ArrayList<Node> _neighbors) {
         val = _val;
         neighbors = _neighbors;
@@ -30,32 +33,37 @@ class Node {
  * @project LeetCodeTask
  */
 
-class Node2 {
-    public int val;
-    public List<Node> neighbors;
-    public Node2() {
-        val = 0;
-        neighbors = new ArrayList<>();
-    }
-    public Node2(int _val) {
-        val = _val;
-        neighbors = new ArrayList<>();
-    }
-    public Node2(int _val, ArrayList<Node> _neighbors) {
-        val = _val;
-        neighbors = _neighbors;
-    }
-}
-
 class CloneGraph {
-    HashSet<Integer> visit = new HashSet<>();
-    HashMap<Integer, Node2> copy = new HashMap<>();
 
-    public Node2 cloneGraph(Node2 node2) {
-        if (node2 == null) return null;
-        Node2 start = new Node2(node2.val);
+    // Definition for a Node.
+    class Node {
+        public int val;
+        public List<Node> neighbors;
+
+        public Node() {
+            val = 0;
+            neighbors = new ArrayList<>();
+        }
+
+        public Node(int _val) {
+            val = _val;
+            neighbors = new ArrayList<>();
+        }
+
+        public Node(int _val, ArrayList<Node> _neighbors) {
+            val = _val;
+            neighbors = _neighbors;
+        }
+    }
+
+    HashSet<Integer> visit = new HashSet<>();
+    HashMap<Integer, Node> copy = new HashMap<>();
+
+    public Node cloneGraph(Node node) {
+        if (node == null) return null;
+        Node start = new Node(node.val);
         copy.put(start.val, start);
-        cloneGraph(node2, start);
+        cloneGraph(node, start);
         return start;
     }
 

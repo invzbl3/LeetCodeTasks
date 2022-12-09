@@ -24,7 +24,7 @@ package com.task.algorithm.Easy;
 
 // https://leetcode.com/problems/reverse-bits/
 
-public class Solution {
+/*public class Solution {
     public static int  reverseBits(int n) {
         int rval = 0x0;
         for (int i = 0; i < 32; i ++) {
@@ -40,7 +40,7 @@ public class Solution {
 
         System.out.println(reverseBits(n));  // 964176192
     }
-}
+}*/
 
 /*
 public class ReverseBits {

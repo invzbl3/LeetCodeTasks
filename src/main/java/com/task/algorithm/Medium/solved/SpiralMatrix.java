@@ -1,4 +1,4 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
