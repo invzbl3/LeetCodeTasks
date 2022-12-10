@@ -1,6 +1,4 @@
-package com.task.algorithm.Medium;
-
-import java.util.Stack;
+package com.task.algorithm.Medium.solved;
 
 /**
  * @author invzbl3 on 12/3/2022
@@ -68,6 +66,39 @@ import java.util.Stack;
     }
 }*/
 
+class NumberOfIslands {
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0) return 0;
+
+        int numIslands = 0;
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (grid[i][j] == '1') {
+                    numIslands += DFS(grid, i, j);
+                }
+            }
+        }
+        return numIslands;
+    }
+
+    public int DFS(char[][] grid, int i, int j) {
+        if (i < 0 || j < 0 || i >= grid.length || j >= grid[i].length || grid[i][j] == '0') return 0;
+
+        grid[i][j] = '0';
+        //down
+        DFS(grid, i + 1, j);
+        //up
+        DFS(grid, i - 1, j);
+        //right
+        DFS(grid, i, j + 1);
+        //left
+        DFS(grid, i, j - 1);
+        return 1;
+    }
+}
+
+/*
 public class NumberOfIslands {
     //function that find the number of islands
     public int findIslands(char[][] matrix) {
@@ -144,4 +175,4 @@ public class NumberOfIslands {
         //prints the result
         System.out.println("Number of Islands: " + noi.findIslands(island));
     }
-}
+}*/

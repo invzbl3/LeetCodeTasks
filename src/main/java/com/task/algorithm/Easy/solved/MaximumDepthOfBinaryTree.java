@@ -39,19 +39,19 @@ package com.task.algorithm.Easy.solved;
  * }
  */
 
-class TreeNode {
+class TreeNode3 {
     public int val;
-    public TreeNode left;
-    public TreeNode right;
+    public TreeNode3 left;
+    public TreeNode3 right;
 
-    TreeNode() {
+    TreeNode3() {
     }
 
-    TreeNode(int val) {
+    TreeNode3(int val) {
         this.val = val;
     }
 
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    TreeNode3(int val, TreeNode3 left, TreeNode3 right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -59,7 +59,7 @@ class TreeNode {
 }
 
 public class MaximumDepthOfBinaryTree {
-    public int maxDepth(TreeNode root) {
+    public int maxDepth(TreeNode3 root) {
         if (root == null) return 0;
 
         int left = maxDepth(root.left);
