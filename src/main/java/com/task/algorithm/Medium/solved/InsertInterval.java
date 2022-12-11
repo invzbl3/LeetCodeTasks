@@ -1,8 +1,8 @@
-package com.task.algorithm.Hard;
+package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
-class Solution {
+class InsertInterval {
 /**
  * Definition for an interval.
  * public class Interval {
@@ -13,16 +13,47 @@ class Solution {
  * }
  */
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
+public static int[][] insert(int[][] intervals, int[] newInterval) {
+    List<int[]> res = new ArrayList<>();
+    int i = 0;
 
+    while (i < intervals.length && intervals[i][1] < newInterval[0]) {
+        res.add(intervals[i++]);
+    }
+
+    while (i < intervals.length && intervals[i][0] <= newInterval[1]) {
+        newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
+        newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+        i++;
+    }
+
+    res.add(newInterval);
+
+    while (i < intervals.length) res.add(intervals[i++]);
+    int[][] ret = new int[res.size()][];
+    for (int z = 0; z < ret.length; z++) {
+        ret[z] = res.get(z);
+    }
+
+    return ret;
+}
+
+    public static void main(String[] args) {
+        int[][] intervals = {{0, 5}};
+        int[] newInterval = {1, 6};
+        int[][] output = insert(intervals, newInterval);
+
+        for (int i = 0; i < intervals.length; i++)
+            System.out.print(output[i][0] + " " + output[i][1]);
+    }
+}
+
+/*
 private static boolean overlap(int[] a, int[] b) {
     return (a[0] <= b[0] && b[0] <= a[1]) || (b[0] <= a[0] && a[0] <= b[1]);
 }
 
-    private static int[][] insert(int[][] intervals, int[] newInterval) {
+    public static int[][] insert(int[][] intervals, int[] newInterval) {
         int i;
         ArrayList<Integer[]> newIntervals = new ArrayList<>();
         for (i = 0; i < intervals.length; i++)
@@ -71,4 +102,4 @@ private static boolean overlap(int[] a, int[] b) {
         for (int i = 0; i < intervals.length; i++)
             System.out.print(output[i][0] + " " + output[i][1]);
     }
-}
+}*/
