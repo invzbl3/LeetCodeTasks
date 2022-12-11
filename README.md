@@ -2,8 +2,7 @@
 
 ## Solutions to Leetcode problems in Java
 
-## [Current Leetcode profile: Solved 1100+ Problems](https://leetcode.com/invzbl3/)
-## [Previous Leetcode profile: Solved 759 Problems](https://leetcode.com/invzbl3/)
+## [Current Leetcode profile: Solved 30+ Problems](https://leetcode.com/invzbl3/)
 
 Problem Category | Count
 --- | --- 
