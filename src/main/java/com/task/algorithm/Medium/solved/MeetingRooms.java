@@ -1,4 +1,4 @@
-package com.task.algorithm.Easy;
+package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
@@ -8,6 +8,28 @@ import java.util.*;
  */
 
 /*
+    252. Meeting Rooms
+
+    Given an array of meeting time intervals where
+    intervals[i] = [start(i), end(i)], determine if a person
+    could attend all meetings.
+
+    Example 1:
+
+    Input: intervals = [[0, 30], [5, 10], [15, 20]]
+    Output: false
+
+    Example 2:
+
+    Input: intervals = [[7, 10], [2, 4]]
+    Output: true
+
+    Constraints:
+
+    * 0 <= intervals.length <= 10^4
+    * intervals[i].length == 2
+    * 0 <= start(i) < end(i) <= 10^6
+
     Algorithm description:
     ---------------------
     It is a very interesting problem frequently asked in interviews of top IT companies like Google, Amazon,
@@ -17,7 +39,52 @@ import java.util.*;
     and logic. Also, we will create Java programs for the same.
  */
 
+class Solution2 {
+    public boolean canAttendMeetings(int[][] intervals) {
+        // base case
+        int n = intervals.length;
+        if(n == 0) return true;
+
+        // Sort array by start time
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+
+        // return false if there is overlapping
+        for (int i = 0; i < n - 1; i++) {
+            int[] meeting1 = intervals[i];
+            int[] meeting2 = intervals[i + 1];
+            if(meeting1[1] > meeting2[0]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+/*
+    class Solution {
+        public int minMeetingRooms(int[][] intervals) {
+            // sort array by the start time
+            Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+
+            // min heap to keep track of the end time
+            PriorityQueue<integer> minHeap = new PriorityQueue<>();
+
+            // find min rooms
+            minHeap.add(intervals[0]);
+            for(int i = 1; i < intervals.length; i++) {
+            int[] cur = intervals[i];
+            if(minHeap.peek() <= cur[0]) {
+                minHeap.poll();
+            }
+            minHeap.add(cur[1]);
+        }
+        // return min rooms
+        return minHeap.size();
+    }
+}*/
+
 // https://www.javatpoint.com/minimum-number-of-meeting-room-required-problem-in-java
+/*
 class MeetingRooms {
     //user-defined function to find the minimum number of meeting rooms required
     public static int solve(int[][] intervals) {
@@ -65,4 +132,4 @@ class MeetingRooms {
         int[][] intervals = {{1, 18}, {18, 23}, {15, 29}, {4, 15}, {2, 11}, {5, 13}};
         System.out.println("Total Number of Meeting room required is: " + solve(intervals));
     }
-}
+}*/

@@ -1,7 +1,6 @@
-package com.task.algorithm.Easy;
+package com.task.algorithm.Easy.solved;
 
 // Java program for reversing linked list using additional space
-import java.util.*;
 
 /**
  * @author invzbl3 on 12/4/2022
