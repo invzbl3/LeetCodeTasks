@@ -2,11 +2,10 @@
 
 ## Solutions to Leetcode problems in Java
 
-## [Current Leetcode profile: Solved 1100+ Problems](https://leetcode.com/invzbl3/)
-## [Previous Leetcode profile: Solved 759 Problems](https://leetcode.com/invzbl3/)
+## [Current Leetcode profile: Solved 30+ Problems](https://leetcode.com/invzbl3/)
 
 Problem Category | Count
 --- | --- 
-[Easy](https://github.com/.../LeetCode-Java-Solutions/blob/master/Easy/README.md) | 0
-[Medium](https://github.com/.../LeetCode-Java-Solutions/blob/master/Medium/README.md) | 0
-[Hard](https://github.com/.../LeetCode-Java-Solutions/blob/master/Hard/README.md) | 0
+[Easy](https://github.com/invzbl3/LeetCodeTasks/tree/main/src/main/java/com/task/algorithm/Easy/solved) | 9
+[Medium](https://github.com/invzbl3/LeetCodeTasks/tree/main/src/main/java/com/task/algorithm/Medium/solved) | 13
+[Hard](https://github.com/invzbl3/LeetCodeTasks/tree/main/src/main/java/com/task/algorithm/Hard/solved) | 2
