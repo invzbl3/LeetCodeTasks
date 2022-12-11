@@ -1,11 +1,7 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 public class CourseSchedule {
 
     public static void main(String[] args) {
