@@ -1,16 +1,39 @@
 package com.task.algorithm.Easy.solved;
 
 /*
-    Algorithm description:
-    ---------------------
-    The maximum depth of a binary tree is the number of nodes from the root down to the furthest leaf node.
-    In other words, it is the height of a binary tree.
-
-    The algorithm uses recursion to calculate the maximum height:
-
-    1. Recursively calculate the height of the tree to the left of the root.
-    2. Recursively calculate the height of the tree to the right of the root.
-    3. Pick the larger height from the two answers and add one to it (to account for the root node).
+ * 104. Maximum Depth of Binary Tree
+ * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ *
+ * Given the root of a binary tree, return its maximum depth.
+ *
+ * A binary tree's maximum depth is the number of nodes along the longest path from the root
+ * node down to the farthest leaf node.
+ *
+ * Example 1:
+ *
+ * Input: root = [3,9,20,null,null,15,7]
+ * Output: 3
+ *
+ * Example 2:
+ *
+ * Input: root = [1,null,2]
+ * Output: 2
+ *
+ * Constraints:
+ *
+ * The number of nodes in the tree is in the range [0, 10^4].
+ * -100 <= Node.val <= 100
+ *
+ * An alternative algorithm description:
+ * -------------------------------------
+ * The maximum depth of a binary tree is the number of nodes from the root down to the furthest leaf node.
+ * In other words, it is the height of a binary tree.
+ *
+ * The algorithm uses recursion to calculate the maximum height:
+ *
+ * 1. Recursively calculate the height of the tree to the left of the root.
+ * 2. Recursively calculate the height of the tree to the right of the root.
+ * 3. Pick the larger height from the two answers and add one to it (to account for the root node).
  */
 
 // Java program to find height of tree
