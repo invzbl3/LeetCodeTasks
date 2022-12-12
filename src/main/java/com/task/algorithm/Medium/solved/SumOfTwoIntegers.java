@@ -1,10 +1,5 @@
 package com.task.algorithm.Medium.solved;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 /*
     Algorithm description:
     ---------------------

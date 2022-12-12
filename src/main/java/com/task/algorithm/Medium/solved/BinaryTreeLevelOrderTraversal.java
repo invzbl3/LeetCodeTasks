@@ -5,10 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
 public class BinaryTreeLevelOrderTraversal {
 
     /**

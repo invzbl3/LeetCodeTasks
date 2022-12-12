@@ -11,11 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 // Main class
 public class RotateImage {
 

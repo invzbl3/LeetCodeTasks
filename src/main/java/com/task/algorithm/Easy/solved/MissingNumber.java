@@ -1,10 +1,5 @@
 package com.task.algorithm.Easy.solved;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 /*
     Given an array nums containing n distinct numbers
     in the range [0, n], return the only number in the

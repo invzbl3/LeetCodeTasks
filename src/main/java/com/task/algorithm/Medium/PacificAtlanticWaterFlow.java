@@ -2,10 +2,6 @@ package com.task.algorithm.Medium;
 
 import java.util.*;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 class PacificAtlanticWaterFlow {
 
     static int[] x = {0, 0, -1, 1};

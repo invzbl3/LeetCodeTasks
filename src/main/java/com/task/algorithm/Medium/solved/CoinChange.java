@@ -2,10 +2,6 @@ package com.task.algorithm.Medium.solved;
 
 import java.util.Arrays;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 class CoinChange {
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];

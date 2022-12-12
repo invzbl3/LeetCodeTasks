@@ -2,10 +2,6 @@ package com.task.algorithm.Easy.solved;
 
 import java.util.Arrays;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 // https://leetcode.com/problems/counting-bits/
 public class CountingBits {
 

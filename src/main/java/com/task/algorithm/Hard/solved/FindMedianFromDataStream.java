@@ -3,11 +3,6 @@ package com.task.algorithm.Hard.solved;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     Algorithm description:
     ---------------------

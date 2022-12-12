@@ -4,10 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
 public class WordSearch {
 
     static Scanner input;

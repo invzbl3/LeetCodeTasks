@@ -1,10 +1,5 @@
 package com.task.algorithm.Easy.solved;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     Given the roots of two binary trees root and subRoot, return true if there is a subtree of root
     with the same structure and node values of subRoot and false otherwise.

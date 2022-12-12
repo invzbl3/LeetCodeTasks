@@ -3,11 +3,6 @@ package com.task.algorithm.Medium.solved;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     208. Implement Trie (Prefix Tree)
 

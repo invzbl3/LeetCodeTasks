@@ -28,11 +28,6 @@ class Node {
 }
 */
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 class CloneGraph {
 
     // Definition for a Node.

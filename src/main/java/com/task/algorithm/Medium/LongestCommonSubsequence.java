@@ -1,10 +1,5 @@
 package com.task.algorithm.Medium;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 // The longest common subsequence in Java
 public class LongestCommonSubsequence {
     static void lcs(String S1, String S2, int m, int n) {

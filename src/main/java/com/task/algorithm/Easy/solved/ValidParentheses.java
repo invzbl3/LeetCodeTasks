@@ -3,11 +3,6 @@ package com.task.algorithm.Easy.solved;
 import java.util.HashMap;
 import java.util.Stack;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     Algorithm description:
     ---------------------

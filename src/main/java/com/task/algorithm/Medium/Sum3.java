@@ -5,11 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
-/**
  * #15
  * Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
  * Note:

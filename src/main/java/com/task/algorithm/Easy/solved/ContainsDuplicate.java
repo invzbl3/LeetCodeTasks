@@ -2,11 +2,6 @@ package com.task.algorithm.Easy.solved;
 
 import java.util.HashSet;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 /*
     Algorithm description:
     ---------------------

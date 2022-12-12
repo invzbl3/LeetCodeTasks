@@ -1,12 +1,5 @@
 package com.task.algorithm.Easy.solved;
 
-import java.util.Arrays;
-
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     Algorithm description:
     ---------------------

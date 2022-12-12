@@ -2,11 +2,6 @@ package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     252. Meeting Rooms
 

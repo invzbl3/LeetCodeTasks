@@ -1,9 +1,5 @@
 package com.task.algorithm.Medium;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 /* A Naive Java Program for LIS Implementation */
 public class LongestIncreasingSubsequence {
     static int max_ref; // stores the LIS

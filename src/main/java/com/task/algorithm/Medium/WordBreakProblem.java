@@ -2,10 +2,7 @@ package com.task.algorithm.Medium;
 
 import java.util.Arrays;
 import java.util.List;
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
+
 class Main {
     // Function to segment given string into a space-separated
     // sequence of one or more dictionary words

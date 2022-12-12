@@ -16,10 +16,6 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
              jump length is 0, which makes it impossible to reach the last index.
  * */
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 public class JumpGame {
     /*
      * Algorithm:

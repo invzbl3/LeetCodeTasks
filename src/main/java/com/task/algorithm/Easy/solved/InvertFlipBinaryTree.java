@@ -1,10 +1,5 @@
 package com.task.algorithm.Easy.solved;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     Given the root of a binary tree, invert the tree, and return its root.
 

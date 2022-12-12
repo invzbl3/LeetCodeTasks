@@ -3,11 +3,6 @@ package com.task.algorithm.Medium.solved;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 /*
     Given an array of distinct integers candidates and a target integer target,
     return a list of all unique combinations of candidates where the chosen numbers sum to target.

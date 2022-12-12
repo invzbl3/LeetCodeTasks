@@ -36,10 +36,6 @@ Given a singly linked list: A0?A1?…?An-1?An, reorder it to: A0?An?A1?An-1?A2?A
         1 4 7 3
 */
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
 class Node {
     int data;
     Node next;

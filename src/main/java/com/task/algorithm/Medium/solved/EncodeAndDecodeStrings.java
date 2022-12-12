@@ -3,11 +3,6 @@ package com.task.algorithm.Medium.solved;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     271. Encode and Decode Strings
 

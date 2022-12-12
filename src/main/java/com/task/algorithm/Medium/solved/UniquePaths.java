@@ -2,11 +2,6 @@ package com.task.algorithm.Medium.solved;
 
 import java.util.Arrays;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 public class UniquePaths {
 
     public int uniquePaths(int m, int n) {

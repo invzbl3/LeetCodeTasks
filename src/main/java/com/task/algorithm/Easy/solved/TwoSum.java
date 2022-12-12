@@ -1,13 +1,5 @@
 package com.task.algorithm.Easy.solved;
 
-import java.util.Arrays;
-import java.util.HashMap;
-
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 /*
     Algorithm description:
     ---------------------

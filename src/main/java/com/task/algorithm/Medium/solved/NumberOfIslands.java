@@ -1,9 +1,5 @@
 package com.task.algorithm.Medium.solved;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 /*public class NumberOfIslands {
     //function that find the number of islands
     public int findIslands(char[][] matrix) {

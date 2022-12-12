@@ -1,10 +1,5 @@
 package com.task.algorithm.Easy.solved;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
 
     You are given the heads of two sorted linked lists list1 and list2.

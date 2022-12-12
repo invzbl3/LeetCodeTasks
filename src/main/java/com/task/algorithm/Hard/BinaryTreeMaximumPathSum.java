@@ -1,10 +1,5 @@
 package com.task.algorithm.Hard;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
 /*
@@ -33,12 +28,9 @@ package com.task.algorithm.Hard;
 
     The number of nodes in the tree is in the range [1, 3 * 104].
     -1000 <= Node.val <= 1000
- */
-
 
 // https://www.educative.io/answers/the-algorithm-for-the-maximum-sum-in-a-binary-tree
 
-/*
     The maximum sum in a binary tree is the largest sum that can be found in a path
     which may start and end at any node in the tree.
 

@@ -5,11 +5,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.PriorityQueue;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
-
 /*
     347. Top K Frequent Elements
 

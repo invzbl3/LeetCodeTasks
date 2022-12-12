@@ -2,11 +2,6 @@ package com.task.algorithm.Medium;
 
 import java.util.Arrays;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
-
 /*A message containing letters from A-Z is being encoded to numbers using the following mapping:
 
         'A' -> 1

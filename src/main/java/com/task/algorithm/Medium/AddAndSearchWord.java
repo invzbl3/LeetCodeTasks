@@ -3,10 +3,6 @@ package com.task.algorithm.Medium;
 import java.util.*;
 import java.util.regex.Pattern;
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
 class AddAndSearchWord {
     ArrayList<String> arr;
     HashMap<String, Integer> map;

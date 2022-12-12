@@ -1,13 +1,109 @@
-package com.task.algorithm.Hard;
+package com.task.algorithm.Hard.solved;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+/*
+    76. Minimum Window Substring
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
+    Given two strings s and t of lengths m and n
+    respectively, return the minimum window
+    substring of s such that every character in t
+    (including duplicates) is included in the window. If
+    there is no such substring, return the empty string
+    "".
+
+    The testcases will be generated such that the answer
+    is unique.
+
+    Example 1:
+
+    Input: s = "ADOBECODEBANC", t =
+    "ABC"
+    Output: "BANC"
+    Explanation: The minimum window
+    substring "BANC" includes 'A',
+    'B', and 'C' from string t.
+
+    Example 2:
+
+    Input: s = "a", t = "a"
+    Output: "a"
+    Explanation: The entire string s
+    is the minimum window.
+
+    Example 3:
+
+    Input: s = "a", t = "aa"
+    Output: ""
+    Explanation: Both 'a's from t must
+    be included in the window.
+    Since the largest window of s only
+    has one 'a', return empty string.
+
+    Constraints:
+
+    * m == s.length
+    * n == t.length
+    * 1 <= m, n <= 10^5
+    * s and t consist of uppercase and lowercase
+    English letters.
+
+    Follow up: Could you find an algorithm that runs in
+    0(m + n) time?
  */
+public class MinimumWindowSubstring {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String str = "ADOBECODEBANC";
+        String t = "ABC";
+        System.out.println(minWindow(str, t));
+    }
+
+    public static String minWindow(String s, String t) {
+        int[] freq_t = new int[256];
+        int[] freq_s = new int[256];
+
+        for (char c : t.toCharArray()) {
+            freq_t[c]++;
+        }
+
+        int count = 0;
+        int min_len = Integer.MAX_VALUE;
+        int start_index = -1;
+        int start = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            freq_s[ch]++;
+
+            if (freq_s[ch] <= freq_t[ch]) {
+                count++;
+            }
+
+            if (count == t.length()) {
+
+                while ((freq_s[s.charAt(start)] > freq_t[s.charAt(start)] || freq_t[s.charAt(start)] == 0)) {
+
+                    freq_s[s.charAt(start)]--;
+
+                    start++;
+                }
+
+                if (min_len > i - start + 1) {
+                    min_len = i - start + 1;
+                    start_index = start;
+                }
+            }
+        }
+
+        if (start_index == -1) {
+            return "";
+        }
+
+        return s.substring(start_index, start_index + min_len);
+    }
+}
+
+/*
 public class MinimumWindowSubstring {
     private static String findMinimumWindowSubstring(String s, String t) {
         int n = s.length();
@@ -80,4 +176,4 @@ public class MinimumWindowSubstring {
 
         System.out.printf("Minimum window substring = %s%n", findMinimumWindowSubstring(s, t));
     }
-}
+}*/

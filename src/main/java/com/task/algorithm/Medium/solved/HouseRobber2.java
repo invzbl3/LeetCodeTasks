@@ -1,9 +1,5 @@
 package com.task.algorithm.Medium.solved;
 
-/**
- * @author invzbl3 on 12/3/2022
- * @project LeetCodeTask
- */
 class HouseRobber2 {
     public int rob(int[] nums) {
         if (nums.length == 1) return nums[0];

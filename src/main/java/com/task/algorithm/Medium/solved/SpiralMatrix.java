@@ -21,10 +21,6 @@ import java.util.*;
 // 1 <= m, n <= 10
 // -100 <= matrix[i][j] <= 100
 
-/**
- * @author invzbl3 on 12/4/2022
- * @project LeetCodeTask
- */
 // Java program for the above approach
 class SpiralMatrix {
 
