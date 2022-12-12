@@ -1,23 +1,33 @@
 package com.task.algorithm.Easy.solved;
 
 /*
-    Algorithm description:
-    ---------------------
-    You are climbing a staircase that has n steps. You can take the steps either 1 or 2 at a time.
-    Calculate how many distinct ways you can climb to the top of the staircase.
-
-    Example:
-
-    For n = 1, the output should be climbingStairs(n) = 1;
-    For n = 2, the output should be climbingStairs(n) = 2.
-    You can either climb 2 steps at once or climb 1 step two times.
-
-    Input/Output
-    [execution time limit] 3 seconds (java)
-    [input] integer n
-    Guaranteed constraints: 1 ≤ n ≤ 50.
-    [output] integer
-    It's guaranteed that the answer will fit in a 32-bit integer.
+ * 70. Climbing Stairs
+ *
+ * You are climbing a staircase. It takes n steps to reach the top.
+ *
+ * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb
+ * to the top?
+ *
+ * Example 1:
+ *
+ * Input: n = 2
+ * Output: 2
+ * Explanation: There are two ways to climb to the top.
+ * 1. 1 step + 1 step
+ * 2. 2 steps
+ *
+ * Example 2:
+ *
+ * Input: n = 3
+ * Output: 3
+ * Explanation: There are three ways to climb to the top.
+ * 1. 1 step + 1 step + 1 step
+ * 2. 1 step + 2 steps
+ * 3. 2 steps + 1 step
+ *
+ * Constraints:
+ * 
+ * 1 <= n <= 45
  */
 public class ClimbingStairs {
 
