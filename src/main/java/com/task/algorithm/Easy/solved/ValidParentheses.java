@@ -7,10 +7,8 @@ import java.util.Stack;
  * 20. Valid Parentheses
  * https://leetcode.com/problems/valid-parentheses/
  *
- * An alternative algorithm description:
- * -------------------------------------
- *  Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
- *  determine if the input string is valid.
+ *  Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine
+ *  if the input string is valid.
  *
  *  An input string is valid if:
  *
