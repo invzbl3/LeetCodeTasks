@@ -3,16 +3,16 @@ package com.task.algorithm.Medium;
 import java.util.*;
 import java.util.regex.Pattern;
 
-class AddAndSearchWord {
+class WordDictionary {
     ArrayList<String> arr;
     HashMap<String, Integer> map;
 
-    public AddAndSearchWord() {
+    public WordDictionary() {
         arr = new ArrayList<>();
         map = new HashMap<>();
     }
 
-    void addword(String x) {
+    void addWord(String x) {
         if (map.get(x) != null)
             return;
 
@@ -41,11 +41,11 @@ class AddAndSearchWord {
 
 class Main2 {
     public static void main(String[] args) {
-        AddAndSearchWord ds = new AddAndSearchWord();
+        WordDictionary ds = new WordDictionary();
 
-        ds.addword("code");
-        ds.addword("java");
-        ds.addword("when");
+        ds.addWord("code");
+        ds.addWord("java");
+        ds.addWord("when");
 
         ds.search("blue");
         ds.search("java");
