@@ -1,4 +1,4 @@
-package com.task.algorithm.Hard;
+package com.task.algorithm.Hard.solved;
 
 /*
  * 23. Merge k Sorted Lists
@@ -40,7 +40,62 @@ package com.task.algorithm.Hard;
  * lists[i] is sorted in ascending order.
  * The sum of lists[i].length will not exceed 10^4.
  */
-public class Solution {
+class Node {
+    int data;
+    Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class Solution {
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        ListNode empty = null;
+        if (lists.length == 0)
+            return empty;
+        ListNode temp = lists[0];
+        for (int i = 1; i < lists.length; i++) {
+            temp = mergeklists(temp, lists[i]);
+        }
+        return temp;
+    }
+
+    public ListNode mergeklists(ListNode l1, ListNode l2) {
+        if (l1 == null)
+            return l2;
+        if (l2 == null)
+            return l1;
+
+        if (l1.val < l2.val) {
+            l1.next = mergeklists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeklists(l1, l2.next);
+            return l2;
+        }
+    }
+}
+
+/*public class Solution {
     public static class ListNode {
         int val;
         ListNode next;
@@ -93,7 +148,7 @@ public class Solution {
         }
         return dummy.next;
     }
-}
+}*/
 
 /*class MergeKSortedLists {
 
