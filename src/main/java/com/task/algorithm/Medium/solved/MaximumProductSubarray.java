@@ -1,21 +1,21 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Medium.solved;
 
 // Java program to find maximum product subarray
 class MaximumProductSubarray {
     /* Returns the product of max product subarray.*/
-    static int maxSubarrayProduct(int[] arr) {
+    static int maxProduct(int[] nums) {
         // Initializing result
-        int result = arr[0];
-        int n = arr.length;
+        int result = nums[0];
+        int n = nums.length;
 
         for (int i = 0; i < n; i++) {
-            int mul = arr[i];
+            int mul = nums[i];
             // traversing in current subarray
             for (int j = i + 1; j < n; j++) {
                 // updating result every time to keep an eye
                 // over the maximum product
                 result = Math.max(result, mul);
-                mul *= arr[j];
+                mul *= nums[j];
             }
             // updating the result for (n-1)th index.
             result = Math.max(result, mul);
@@ -27,6 +27,6 @@ class MaximumProductSubarray {
     public static void main(String[] args) {
         int[] arr = {1, -2, -3, 0, 7, -8, -2};
         System.out.println("Maximum Sub array product is "
-                + maxSubarrayProduct(arr));
+                + maxProduct(arr));
     }
 }
