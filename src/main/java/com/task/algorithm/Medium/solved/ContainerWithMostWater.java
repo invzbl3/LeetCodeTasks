@@ -1,4 +1,4 @@
-package com.task.algorithm.Medium;
+package com.task.algorithm.Medium.solved;
 
 /**
  * 11. Container With Most Water
