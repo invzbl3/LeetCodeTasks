@@ -1,6 +1,6 @@
 package com.task.algorithm.Easy.solved;
 
-/*
+/**
  * 125. Valid Palindrome
  * https://leetcode.com/problems/valid-palindrome/
  *
@@ -9,7 +9,7 @@ package com.task.algorithm.Easy.solved;
  * Alphanumeric characters include letters and numbers.
  *
  * Given a string s, return true if it is a palindrome, or false otherwise.
-
+ *
  * Example 1:
  *
  * Input: s = "A man, a plan, a canal: Panama"

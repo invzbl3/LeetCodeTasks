@@ -1,6 +1,6 @@
 package com.task.algorithm.Easy.solved;
 
-/*
+/**
  * 268. Missing Number
  * https://leetcode.com/problems/missing-number/
  *

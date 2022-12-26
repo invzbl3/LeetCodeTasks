@@ -1,6 +1,6 @@
 package com.task.algorithm.Easy.solved;
 
-/*
+/**
  * 70. Climbing Stairs
  * https://leetcode.com/problems/climbing-stairs/
  *

@@ -2,7 +2,7 @@ package com.task.algorithm.Easy.solved;
 
 import java.util.Arrays;
 
-/*
+/**
  * 338. Counting Bits
  * https://leetcode.com/problems/counting-bits/
  *

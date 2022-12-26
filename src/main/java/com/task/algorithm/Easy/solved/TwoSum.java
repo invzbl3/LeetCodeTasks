@@ -1,6 +1,6 @@
 package com.task.algorithm.Easy.solved;
 
-/*
+/**
  * 1. Two Sum
  * https://leetcode.com/problems/two-sum/
  *

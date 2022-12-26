@@ -1,6 +1,6 @@
 package com.task.algorithm.Easy.solved;
 
-/*
+/**
  * 190. Reverse Bits
  * https://leetcode.com/problems/reverse-bits/
  *

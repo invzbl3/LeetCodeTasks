@@ -2,7 +2,7 @@ package com.task.algorithm.Easy.solved;
 
 import java.util.HashSet;
 
-/*
+/**
  * 217. Contains Duplicate
  * https://leetcode.com/problems/contains-duplicate/
  *

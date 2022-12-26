@@ -3,7 +3,7 @@ package com.task.algorithm.Easy.solved;
 import java.util.HashMap;
 import java.util.Stack;
 
-/*
+/**
  * 20. Valid Parentheses
  * https://leetcode.com/problems/valid-parentheses/
  *
