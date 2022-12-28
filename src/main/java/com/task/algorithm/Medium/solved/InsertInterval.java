@@ -2,6 +2,9 @@ package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
+/**
+ *
+ */
 class InsertInterval {
 /**
  * Definition for an interval.
