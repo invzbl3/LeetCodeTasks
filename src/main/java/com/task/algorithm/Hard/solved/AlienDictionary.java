@@ -45,8 +45,9 @@ class AlienDictionary {
         Map<Character, Set<Character>> map = new HashMap<>();
         int[] inDegree = new int[26];
 
-
+        // build map;
         buildMap(words, map, inDegree);
+
         // dfs to get order
         return dfs(map, inDegree);
     }
@@ -86,8 +87,8 @@ class AlienDictionary {
         StringBuilder sb = new StringBuilder();
         Queue<Character> queue = new LinkedList<>();
 
-        for (char c : map) {
-            if (inDegree[c - 'a' == 0]) {
+        for (char c : map.keySet()) {
+            if (inDegree[c - 'a'] == 0) {
                 queue.offer(c);
                 sb.append(c);
             }
@@ -96,6 +97,7 @@ class AlienDictionary {
         while (!queue.isEmpty()) {
             char c = queue.poll();
             for (char nextC : map.get(c)) {
+                inDegree[nextC - 'a']--;
                 if (inDegree[nextC - 'a'] == 0) {
                     queue.offer(nextC);
                     sb.append(nextC);
@@ -129,8 +131,8 @@ class AlienDictionary {
     ]
     return "" because the first one has more chars than second one
 */
-public class AlienDictionary {
-/*    public String alienOrder(String[] words) {
+/*public class AlienDictionary {
+     public String alienOrder(String[] words) {
         Map<Character, Set<Character>> map = new HashMap<>();
         Map<Character, Integer> degree = new HashMap<>();
         StringBuilder result = new StringBuilder();
@@ -183,41 +185,41 @@ public class AlienDictionary {
         return result.length() == degree.size() ? result.toString() : "";
     }*/
 
-    public class Solution {
-        int index = 0;
-        Map<Character, Integer> map = new HashMap<>();
+/*
+public class Solution {
+    int index = 0;
+    Map<Character, Integer> map = new HashMap<>();
 
-        public boolean isAlienSorted(String[] words, String order) {
-            for (int i = 0; i < order.length(); i++) {
-                map.put(order.charAt(i), i);
-            }
-            map.put(' ', -1);
-
-            while (true) {
-                if (index == words.length - 1) return true;
-                if (isSorted(words[index], words[index + 1])) {
-                    index++;
-                } else {
-                    return false;
-                }
-            }
+    public boolean isAlienSorted(String[] words, String order) {
+        for (int i = 0; i < order.length(); i++) {
+            map.put(order.charAt(i), i);
         }
+        map.put(' ', -1);
 
-        private boolean isSorted(String o1, String o2) {
-            char[] lastArray = o1.toCharArray();
-            char[] newArray = o2.toCharArray();
-
-            int length = Math.max(lastArray.length, newArray.length);
-
-            for (int i = 0; i < length; i++) {
-                char last_char = i < lastArray.length ? lastArray[i] : ' ';
-                char new_char = i < newArray.length ? newArray[i] : ' ';
-
-                if (map.get(last_char) < map.get(new_char)) return true;
-                else if (map.get(last_char) > map.get(new_char)) return false;
+        while (true) {
+            if (index == words.length - 1) return true;
+            if (isSorted(words[index], words[index + 1])) {
+                index++;
+            } else {
+                return false;
             }
-
-            return true;
         }
     }
-}
+
+    private boolean isSorted(String o1, String o2) {
+        char[] lastArray = o1.toCharArray();
+        char[] newArray = o2.toCharArray();
+
+        int length = Math.max(lastArray.length, newArray.length);
+
+        for (int i = 0; i < length; i++) {
+            char last_char = i < lastArray.length ? lastArray[i] : ' ';
+            char new_char = i < newArray.length ? newArray[i] : ' ';
+
+            if (map.get(last_char) < map.get(new_char)) return true;
+            else if (map.get(last_char) > map.get(new_char)) return false;
+        }
+
+        return true;
+    }
+}*/
