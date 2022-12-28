@@ -1,6 +1,6 @@
 package com.task.algorithm.Medium.solved;
 
-/*
+/**
  * 152. Maximum Product Subarray
  * https://leetcode.com/problems/maximum-product-subarray/
  *

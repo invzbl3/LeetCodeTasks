@@ -2,38 +2,38 @@ package com.task.algorithm.Medium.solved;
 
 import java.util.*;
 
-/*
-    252. Meeting Rooms
-
-    Given an array of meeting time intervals where
-    intervals[i] = [start(i), end(i)], determine if a person
-    could attend all meetings.
-
-    Example 1:
-
-    Input: intervals = [[0, 30], [5, 10], [15, 20]]
-    Output: false
-
-    Example 2:
-
-    Input: intervals = [[7, 10], [2, 4]]
-    Output: true
-
-    Constraints:
-
-    * 0 <= intervals.length <= 10^4
-    * intervals[i].length == 2
-    * 0 <= start(i) < end(i) <= 10^6
-
-    Algorithm description:
-    ---------------------
-    It is a very interesting problem frequently asked in interviews of top IT companies like Google, Amazon,
-    TCS, Accenture, Adobe, Apple, Infosys, etc. By solving the problem, one wants to check the logical
-    ability, critical thinking, and problem-solving skill of the interviewee. So, in this section,
-    we are going to find minimum number of meeting rooms required problem in Java with different approaches
-    and logic. Also, we will create Java programs for the same.
+/**
+ *  252. Meeting Rooms
+ *  https://leetcode.com/problems/meeting-rooms/
+ *
+ *  Given an array of meeting time intervals where
+ *  intervals[i] = [start(i), end(i)], determine if a person
+ *  could attend all meetings.
+ *
+ *  Example 1:
+ *
+ *  Input: intervals = [[0, 30], [5, 10], [15, 20]]
+ *  Output: false
+ *
+ *  Example 2:
+ *
+ *  Input: intervals = [[7, 10], [2, 4]]
+ *  Output: true
+ *
+ *  Constraints:
+ *
+ *  * 0 <= intervals.length <= 10^4
+ *  * intervals[i].length == 2
+ *  * 0 <= start(i) < end(i) <= 10^6
+ *
+ *  Algorithm description:
+ *  ---------------------
+ *  It is a very interesting problem frequently asked in interviews of top IT companies like Google, Amazon,
+ *  TCS, Accenture, Adobe, Apple, Infosys, etc. By solving the problem, one wants to check the logical
+ *  ability, critical thinking, and problem-solving skill of the interviewee. So, in this section,
+ *  we are going to find minimum number of meeting rooms required problem in Java with different approaches
+ *  and logic. Also, we will create Java programs for the same.
  */
-
 class Solution2 {
     public boolean canAttendMeetings(int[][] intervals) {
         // base case
