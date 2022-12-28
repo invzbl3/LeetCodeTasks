@@ -30,15 +30,40 @@ package com.task.algorithm.Medium.solved;
  */
 class TreeNode3 {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNode3 left;
+    TreeNode3 right;
 
     TreeNode3(int x) {
         val = x;
     }
 }
 
-public class ValidateBinarySearchTree {
+class Solution {
+    public static void main(String[] args) {
+        TreeNode3 root = new TreeNode3(5);
+        TreeNode3 one = new TreeNode3(4);
+        TreeNode3 two = new TreeNode3(1);
+        TreeNode3 three = new TreeNode3(7);
+        TreeNode3 four = new TreeNode3(8);
+        root.left = one;
+        one.left = two;
+        one.right = three;
+        root.right = four;
+        isValidBST(root);
+    }
+    public static boolean isValidBST(TreeNode3 root) {
+        return isValidBST(root, null, null);
+    }
+
+    public static boolean isValidBST(TreeNode3 root, Integer min, Integer max) {
+        if(root == null) return true;
+        if(min != null && root.val <= min) return false;
+        if(max != null && root.val >= max) return false;
+        return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
+    }
+}
+
+/*public class ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
         // Start typing your Java solution below
         // DO NOT write main() function
@@ -53,7 +78,7 @@ public class ValidateBinarySearchTree {
         if (left && right) return true;
         return false;
     }
-}
+}*/
 
 // Medium
 // Given the root of a binary tree,
