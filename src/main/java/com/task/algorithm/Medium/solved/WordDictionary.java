@@ -1,5 +1,11 @@
 package com.task.algorithm.Medium.solved;
 
+/**
+ * Word Dictionary
+ *
+ *
+ */
+
 import java.util.HashMap;
 
 public class WordDictionary {
