@@ -63,7 +63,6 @@ package com.task.algorithm.Medium.solved;
  *   Follow up: Could you use search pruning to make
  *   your solution faster with a larger board?
  * */
-
 class WordSearch {
 
     private boolean[][] visited;
