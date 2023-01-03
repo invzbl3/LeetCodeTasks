@@ -1,6 +1,5 @@
 package com.task.algorithm.Medium.solved;
 
-
 /**
  * 55. Jump Game
  * https://leetcode.com/problems/jump-game/
