@@ -31,36 +31,26 @@ package com.task.algorithm.Easy.solved;
  *
  */
 public class PalindromeNumber {
-
-    public static boolean evenNumPalindrome(int x){
-        return palindromeFlagCheck(x);
-    }
-
-    private static boolean palindromeFlagCheck(int x) {
-        boolean isPalindrome = false;
-        for(int i = 0;i<=Integer.toString(x).length()-1;i++){
-            if(Integer.toString(x).charAt(i) == Integer.toString(x).charAt(Integer.toString(x).length()-1-i)){
-                isPalindrome = true;
-            }else{
-                return false;
-            }
-        }
-        return isPalindrome;
-    }
-
-    public static boolean oddNumPalidrome(int x){
-
-        return palindromeFlagCheck(x);
+    public static void main(String[] args) {
+        boolean palindrome = isPalindrome(11);
+        System.out.println("result="+palindrome);
     }
 
     public static boolean isPalindrome(int x) {
-
-        if(Integer.toString(Math.abs(x)).length()%2==0){
-            return evenNumPalindrome(Math.abs(x));
+        boolean isPalindrome =false;
+        int firstnum=x;
+        long res=0;
+        if(x<0){
+            return isPalindrome;
         }
-        return oddNumPalidrome(Math.abs(x));
-    }
-    public static void main(String[] args){
-        System.out.println(isPalindrome(-8));
+        while (x != 0){
+            res =res*10 + x%10;
+            x /=10;
+        }
+        int y = (int)res ==res? (int)res :0;
+        if(firstnum == y){
+            isPalindrome=true;
+        }
+        return isPalindrome;
     }
 }
