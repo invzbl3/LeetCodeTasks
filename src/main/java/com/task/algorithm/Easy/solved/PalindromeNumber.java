@@ -38,17 +38,17 @@ public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
         boolean isPalindrome =false;
-        int firstnum=x;
+        int firstNum=x;
         long res=0;
         if(x<0){
-            return isPalindrome;
+            return false;
         }
         while (x != 0){
             res =res*10 + x%10;
             x /=10;
         }
         int y = (int)res ==res? (int)res :0;
-        if(firstnum == y){
+        if(firstNum == y){
             isPalindrome=true;
         }
         return isPalindrome;
