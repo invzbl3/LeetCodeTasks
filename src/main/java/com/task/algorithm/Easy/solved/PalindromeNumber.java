@@ -31,25 +31,26 @@ package com.task.algorithm.Easy.solved;
  *
  */
 public class PalindromeNumber {
+
     public static void main(String[] args) {
         boolean palindrome = isPalindrome(11);
-        System.out.println("result="+palindrome);
+        System.out.println("result=" + palindrome);
     }
 
     public static boolean isPalindrome(int x) {
-        boolean isPalindrome =false;
-        int firstNum=x;
-        long res=0;
-        if(x<0){
+        boolean isPalindrome = false;
+        int firstNum = x;
+        long res = 0;
+        if (x < 0) {
             return false;
         }
-        while (x != 0){
-            res =res*10 + x%10;
-            x /=10;
+        while (x != 0) {
+            res = res * 10 + x % 10;
+            x /= 10;
         }
-        int y = (int)res ==res? (int)res :0;
-        if(firstNum == y){
-            isPalindrome=true;
+        int y = (int) res == res ? (int) res : 0;
+        if (firstNum == y) {
+            isPalindrome = true;
         }
         return isPalindrome;
     }
