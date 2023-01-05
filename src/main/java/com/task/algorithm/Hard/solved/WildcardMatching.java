@@ -39,30 +39,28 @@ package com.task.algorithm.Hard.solved;
 class WildcardMatching {
     public boolean isMatch(String s, String p) {
         if (s == null || p == null) return false;
-        return isMatch(s, 0, p, 0);
-    }
 
-    private boolean isMatch(String s, int i, String p, int j) {
-        if (i >= s.length()) return restAreStars(p, j);
-        if (j >= p.length()) return false;
+        boolean[][] dp = new boolean[p.length() + 1][s.length() + 1];
+        dp[0][0] = true;
+        for (int j = 1; j <= s.length(); j++) dp[0][j] = false;
+        for (int i = 1; i <= p.length(); i++) dp[i][0] = p.charAt(i - 1) == '*' && dp[i - 1][0];
 
-        switch (p.charAt(j)) {
-            case '?':
-                return isMatch(s, i+1, p, j+1);
-            case '*':
-                while (j+1 < p.length() && p.charAt(j+1) == '*') j++;
-                return isMatch(s, i, p, j+1) || isMatch(s, i+1, p, j+1) || isMatch(s, i+1, p, j);
-            default:
-                return s.charAt(i) == p.charAt(j) && isMatch(s, i+1, p, j+1);
+        for (int i = 1; i <= p.length(); i++) {
+            char c = p.charAt(i - 1);
+            for (int j = 1; j <= s.length(); j++) {
+                switch (c) {
+                    case '?':
+                        dp[i][j] = dp[i - 1][j - 1];
+                        break;
+                    case '*':
+                        dp[i][j] = dp[i - 1][j] || dp[i - 1][j - 1] || dp[i][j - 1];
+                        break;
+                    default:
+                        dp[i][j] = c == s.charAt(j - 1) && dp[i - 1][j - 1];
+                }
+            }
         }
-    }
-
-    private boolean restAreStars(String p, int j) {
-        while (j < p.length()) {
-            if (p.charAt(j) != '*') return false;
-            j++;
-        }
-        return true;
+        return dp[p.length()][s.length()];
     }
 
     public static void main(String[] args) {
