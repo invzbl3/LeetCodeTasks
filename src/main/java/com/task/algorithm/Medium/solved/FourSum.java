@@ -1,8 +1,6 @@
 package com.task.algorithm.Medium.solved;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 18. 4Sum
@@ -36,44 +34,67 @@ import java.util.List;
 public class FourSum {
 
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        List<List<Integer>> res = new LinkedList<>();
-        Arrays.sort(nums);
-        int lens = nums.length;
-        for (int i = 0; i < lens - 3; i++) {
-            if (i > 0 && nums[i] == nums[i - 1])
-                continue;
+        List<List<Integer>> result = new ArrayList<>();
+        if (nums.length > 3) {
+            Integer[] numsArray = shrink(nums);
+            int n = numsArray.length;
+            Set<String> set = new HashSet<>();
 
-            if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) break;
-            if (nums[i] + nums[lens - 1] + nums[lens - 2] + nums[lens - 3] < target) continue;
-
-            for (int j = i + 1; j < lens - 2; j++) {
-                if (j - i > 1 && nums[j] == nums[j - 1]) continue;
-
-                if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) break;
-                if (nums[i] + nums[j] + nums[lens - 1] + nums[lens - 2] < target) continue;
-
-                int left = j + 1;
-                int right = lens - 1;
-                while (left < right) {
-                    int temp = nums[i] + nums[j] + nums[left] + nums[right];
-                    if (temp > target)
-                        right--;
-                    else if (temp < target)
-                        left++;
-                    else {
-                        List<Integer> temList = new LinkedList<>(
-                                Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
-                        res.add(temList);
-                        while (left < right && nums[left] == nums[left + 1])
-                            left++;
-                        while (left < right && nums[right] == nums[right - 1])
-                            right--;
-                        left++;
-                        right--;
+            for (int i = 0; i < n - 3; i++) {
+                if (isBreak(numsArray[i], target)) {
+                    break;
+                }
+                for (int j = i + 1; j < n - 2; j++) {
+                    if (isBreak(numsArray[i] + numsArray[j], target)) {
+                        break;
+                    }
+                    for (int k = j + 1; k < n - 1; k++) {
+                        if (isBreak(numsArray[i] + numsArray[j] + numsArray[k], target)) {
+                            break;
+                        }
+                        for (int l = k + 1; l < n; l++) {
+                            int fourSum = numsArray[i] + numsArray[j] + numsArray[k] + numsArray[l];
+                            if (fourSum == target) {
+                                if (!set.contains("" + numsArray[i] + numsArray[j] + numsArray[k])) {
+                                    result.add(Arrays.asList(numsArray[i], numsArray[j], numsArray[k], numsArray[l]));
+                                    set.add("" + numsArray[i] + numsArray[j] + numsArray[k]);
+                                }
+                                break;
+                            }
+                            if (isBreak(fourSum, target)) {
+                                break;
+                            }
+                        }
                     }
                 }
             }
         }
-        return res;
+        return result;
+    }
+
+    public static void main(String[] args) {
+        FourSum instance = new FourSum();
+        System.out.println(instance.fourSum(new int[]{1, 0, -1, 0, -2, 2}, 0));
+        System.out.println(instance.fourSum(new int[]{2, 2, 2, 2, 2}, 8));
+        System.out.println(instance.fourSum(new int[]{-2, -1, -1, 1, 1, 2, 2}, 0));
+    }
+
+    private boolean isBreak(int sum, int target) {
+        return (target > 0 && sum > target) || (target <= 0 && sum > 0);
+    }
+
+    private Integer[] shrink(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            if (i <= 3) {
+                result.add(nums[i]);
+            } else {
+                if (nums[i] != result.get(result.size() - 4)) {
+                    result.add(nums[i]);
+                }
+            }
+        }
+        return result.toArray(new Integer[0]);
     }
 }
